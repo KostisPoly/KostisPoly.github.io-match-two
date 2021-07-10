@@ -1,0 +1,123 @@
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* 
+    Defining what 1rem is.
+    Default browser size 16px, i set it to 10px
+    10px/16px = 62.5% (concerning browser custom size)
+    */
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.7;
+    color: gray;
+    min-width: fit-content;
+    padding: 5rem;
+    box-sizing: border-box;
+    background-color: #cecece;
+}
+
+h1 {
+    margin: 3rem;
+}
+
+.btn {
+    margin: 3rem;
+}
+
+.section {
+    /* background-color: #cecece; */
+    width: 100%;
+    height: 65rem;
+    /* padding: 25rem 0 15rem 0; */
+    /* margin-top: -8rem; */
+}
+
+.cards {
+    height: 100%;
+    width: 100%;
+    /* background-color: navajowhite; */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    /* justify-items: center;
+    align-items: center; */
+    grid-gap: 5rem;  
+}
+
+.flip-card {
+    border-style: hidden;
+    background-color: transparent;
+    width: 120px;
+    height: 120px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    color: slateblue;
+}
+
+.card-back {
+    background-color: #222e36ef;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.fliped {
+    transform: rotateY(180deg);
+}
+/* .card {
+    perspective: 200rem;
+    -moz-perspective: 200rem;
+    position: relative;
+    height: 50rem; 
+}
+
+.card-side {
+    background-color: #fff;
+    height: 15rem;
+    transition: all 1.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.card .backside {
+    transform: rotateY(180deg); 
+} */
